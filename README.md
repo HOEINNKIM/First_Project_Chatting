@@ -1,9 +1,7 @@
-<p style="text-align: center;"># First Project  '**SIRIAI**'</p>
-
-  
 ![siriai](./FirstProjectFinal/src/user/ui/siriai.jpg)
   
-  
+# First Project  'SIRIAI'
+    
   It means 'Let's start from acquaintance'  in Japanese   
    
     
