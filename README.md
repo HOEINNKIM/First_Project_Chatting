@@ -5,7 +5,11 @@
 ### Period : 3 weeks   
    
    
-### Tech : Pure Java 8, Java fx, Mybatis, Oracle DB 11g  
+### Tech  
+1. Pure Java 8  
+2. Java fx  
+3. Mybatis  
+4. Oracle DB 11g    
 
 ### Settings  
 1. Open 'sqlCodesSetting.txt' in src folder  
