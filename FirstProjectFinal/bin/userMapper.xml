@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 회원 정보 처리 SQL -->
+<mapper namespace="user.dao.UserMapper">
+	<!-- <구현할 기능> 테이블명 : ChattingVersion1 
+	1. 대화 내용이 입력될때마다 IP주소, 텍스트내용, 날짜, 인덱스 삽입 
+	2. 전체 대화 내용 출력 
+	3. 선택된 날짜에 해당하는 대화 내용을 출력 
+	4. 특정 단어가 들어있는 대화 내용만 출력 
+	5. ID를 기준으로 자기가 쓴 대화 내용만 출력 -->
+
+
+	<!-- 1.삽입 -->
+	<insert id="insertChat" parameterType="User">
+		insert into CHATTINGVERSION1 (
+		ID
+		, TEXT
+		, CHATDATE
+		)
+		values (
+		#{id}
+		, #{text}
+		, SYSDATE)
+	</insert>
+
+
+	<!-- 2.전체 대화 조회 -->
+	<select id="showAll" resultType="User">
+		SELECT
+		ID,
+		TEXT,
+		CHATDATE
+
+		FROM
+		CHATTINGVERSION1
+
+		ORDER BY
+		CHATDATE ASC		
+
+	</select>
+
+
+	<!-- 3.날짜로 조회 -->
+	<select id="showByChatDate" parameterType="String" resultType="User">
+		SELECT
+		ID,
+		TEXT,
+		CHATDATE
+
+		FROM
+		CHATTINGVERSION1
+
+		WHERE
+		TO_CHAR(CHATDATE, 'YYMMDD') = #{text}
+	
+		ORDER BY
+		CHATDATE ASC
+	</select>
+
+
+	<!-- 4.단어로 조회 -->
+	<select id="showByText" parameterType="String" resultType="User">
+		SELECT
+		ID,
+		TEXT,
+		CHATDATE
+
+		FROM
+		CHATTINGVERSION1
+
+		WHERE
+		TEXT LIKE #{text}
+		
+		ORDER BY
+		CHATDATE ASC		
+	</select>
+
+
+	<!-- 5.ID로 조회 -->
+	<select id="showByID" parameterType="String" resultType="User">
+		SELECT
+		ID,
+		TEXT,
+		CHATDATE
+
+		FROM
+		CHATTINGVERSION1
+
+		WHERE
+		ID = #{id} <!-- 여기에 전달받은 IP주소 전달 -->
+		
+		ORDER BY
+		CHATDATE ASC
+		
+	</select>
+	
+	<!-- 6.날짜로 삭제-->
+	<delete id="deleteByChatDate" parameterType="String" >
+		DELETE FROM CHATTINGVERSION1	
+		WHERE
+		TO_CHAR(CHATDATE, 'YYMMDD') = #{text}	
+	</delete>
+	
+	<!-- 7.단어 업데이트 -->
+	<update id="updateWord" parameterType="ChangeWord">
+		UPDATE CHATTINGVERSION1
+		
+		SET 
+		TEXT = #{newMessage}
+		
+		WHERE
+		TEXT = #{oldMessage} <!-- 여기에 전달받은 IP주소 전달 -->
+		
+	</update>
+	
+</mapper>

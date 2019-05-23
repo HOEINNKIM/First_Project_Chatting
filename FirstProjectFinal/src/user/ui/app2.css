@@ -1,0 +1,11 @@
+/*viewport 배경색*/
+.text-area .scroll-pane .viewport{
+	-fx-background-color: transparent;
+	-fx-background-image: url("siriai.jpg");
+	-fx-background-size: cover;
+}
+
+/*content 컨텐츠*/
+.text-area .scroll-pane .content{
+	-fx-background-color: transparent;
+}

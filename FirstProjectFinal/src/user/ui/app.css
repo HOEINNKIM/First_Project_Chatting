@@ -1,0 +1,4 @@
+/*content 배경색*/
+.text-area .scroll-pane .content{
+	-fx-background-color: gold;
+}
