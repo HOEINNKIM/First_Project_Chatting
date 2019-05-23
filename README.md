@@ -1,10 +1,16 @@
-# First Project ¡¸ò±ªêùêª¤¡¹  
+# First Project ¡¸SIRIAI¡¹  
+   
+   
+   
+## It means 'Let's start from acquaintance'  in Japanese   
+   
+    
+### Period : 3 weeks   
+   
+   
+### Tech : Pure Java 8, Java fx, Mybatis, Oracle DB 11g  
 
-## It means 'Let's start from acquaintance'  
-## Period : 3 weeks  
-## Tech : Pure Java 8, Java fx, Mybatis, Oracle DB 11g  
-
-## Settings  
+### Settings  
 1. Open 'sqlCodesSetting.txt' in src folder  
 2. Copy the SQL codes and run it(Used sqldeveloper in my case).  
 3. Modify 'db.properties' to your DB configuration settings.  
