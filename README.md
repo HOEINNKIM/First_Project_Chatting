@@ -1,9 +1,5 @@
-# First Project  
-'**SIRIAI**'  
-   
-   
-   
-## It means 'Let's start from acquaintance'  in Japanese   
+# First Project  '**SIRIAI**'    
+  It means 'Let's start from acquaintance'  in Japanese   
    
     
 ### Period : 3 weeks   
