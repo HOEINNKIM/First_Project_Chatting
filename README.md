@@ -1,4 +1,8 @@
 # First Project  '**SIRIAI**'    
+
+![siriai](./FirstProjectFinal/src/user/ui/siriai.jpg)
+  
+  
   It means 'Let's start from acquaintance'  in Japanese   
    
     
